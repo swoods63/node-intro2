@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <form onsubmit="app.controllers.bookController.createBook(event)">
+    <input placeholder="title" type="text" name="booktitle">
+    <input placeholder="published" type="text" name="bookpublished">
+    <input placeholder="author" type="text" name="bookauthor">
+    <input placeholder="rating" type="number" name="bookrating">
+    <button type="submit">Submit Book</button>
+    </form>
+    <ul id="book-list"> 
+    </ul>
+
+    <form onsubmit="app.controllers.movieController.createMovie(event)">
+      <input placeholder="title" type="text" name="movietitle">
+      <input placeholder="published" type="text" name="moviepublished">
+      <input placeholder="author" type="text" name="movieauthor">
+      <input placeholder="rating" type="number" name="movierating">
+      <button type="submit">Submit Movie</button>
+    </form>
+
+      <ul id="movie-list">
+      </ul>
+
+
+
+    <!--JS Libraries-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <script src="book-service.js"></script>
+    <script src="movie-service.js"></script>
+    
+    <!--dont need public because on same level-->
+    <script src="book-controller.js"></script>
+    <script src="movie-controller.js"></script>
+
+    <script src="init.js"></script>
+</body>
+
+</html>
